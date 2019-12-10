@@ -48,8 +48,8 @@ function playGame() {
 
         if (snake.x < 0 || snake.x > canvas.width || snake.y < 0 || snake.y > canvas.height) {
             resetGame();
-            stopGame();
-            return;
+            //stopGame();
+            //return;
         }
     } else if (modeGame.textContent === 'B') { // xuyên tường
 
@@ -102,8 +102,8 @@ function playGame() {
             // răn cắn thân => end
             if (snake.x === snake.cells[i].x && snake.y === snake.cells[i].y) {
                 resetGame();
-                stopGame();
-                return;
+                //stopGame();
+                //return;
             }
 
         }
