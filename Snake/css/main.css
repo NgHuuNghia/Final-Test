@@ -1,0 +1,29 @@
+* {}
+
+
+.canvas {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+.mode-game {
+    text-align: center;
+}
+
+#mode{
+    color: red;
+}
+
+body {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas#canvasMain {
+    margin-top: 20px;
+    border: 14px solid rgba(14, 94, 14, 0.856);
+    background: greenyellow;
+}   

@@ -1,0 +1,62 @@
+* {}
+
+.input {
+    margin-left: 420px;
+}
+
+:root {
+    --column: 100;
+}
+
+body {
+    width: auto;
+}
+
+.rows {
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(var(--column), 50px);
+    grid-template-rows: auto auto auto auto;
+}
+
+.headers {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(var(--column), 50px);
+    grid-template-rows: auto auto auto auto;
+}
+
+
+.header {
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+    background-color: aqua;
+}
+
+.header:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+}
+
+input {
+    margin-left: 10px;
+}
+
+input#btnRefesh {
+    background: aliceblue;
+}
+
+input#btnCreate {
+    color: wheat;
+    background: green;
+}
