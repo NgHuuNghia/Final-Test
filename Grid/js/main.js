@@ -4,7 +4,8 @@ var matrix = [];
 
 var headerElement;
 var gridMain;
-var header;
+const header = document.querySelector('.headers');
+const topOfHeader = header.offsetTop;
 
 const buttonCreate = document.querySelector('#btnCreate');
 const buttonRefesh = document.querySelector('#btnRefesh');
@@ -112,7 +113,7 @@ function start() {
     document.documentElement.style.setProperty('--column', mColumns);
     
     gridMain = document.querySelector('.container');
-    header = document.querySelector('.headers');
+    
 
     createHeader();
     createGrid();
@@ -125,6 +126,15 @@ function start() {
 
 }
 
+function fixNav(){
+
+    if(window.scrollY >= topOfHeader){
+        document.body.classList.add('fixed-nav');
+    }
+    else{
+        document.body.classList.remove('fixed-nav');
+    }
+}
 
 //event handle
 
@@ -132,3 +142,4 @@ buttonCreate.addEventListener('click', start);
 buttonRefesh.addEventListener('click', function(){
     location.reload();
 });
+window.addEventListener('scroll',fixNav);
